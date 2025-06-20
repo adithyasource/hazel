@@ -3,7 +3,7 @@
     <tbody>
         <tr>
             <td><a href="https://github.com/adithyasource/hazel/releases"> download for iris</a></td>
-            <td>simple fog controls for minecraft</td>
+            <td>fog control shader for minecraft</td>
         </tr>
     </tbody>
 </table>
