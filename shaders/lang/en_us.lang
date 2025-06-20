@@ -1,0 +1,14 @@
+option.FOG_START=start
+option.FOG_START.comment=changes the starting of the fog in relation to the current render distance
+option.FOG_END=end
+option.FOG_END.comment=changes the ending of the fog in relation to the current render distance
+option.FOG_DENSITY=density
+option.FOG_DENSITY.comment=controls the thickness/density of the fog
+option.FOG_CURVE=fog curve
+option.FOG_CURVE.comment=controls how the fog fades as the distance changes
+value.FOG_CURVE.0=linear
+value.FOG_CURVE.1=fast start
+value.FOG_CURVE.2=slow start
+value.FOG_CURVE.3=s-curve
+value.FOG_CURVE.4=exponential
+value.FOG_CURVE.5=inverse
