@@ -3,20 +3,20 @@
 #define FOG_DENSITY 0.5 // [0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.25 1.5 1.75 2.0 2.5 3.0 4.0 5.0 8.0 10.0]
 #define FOG_CURVE 0 // [0 1 2 3 4 5] Linear, Fast Start, Slow Start, S-Curve, Exponential, Inverse
 
-// Compute fog curve
+// compute fog curve
 float applyFogCurve(float t) {
     #if FOG_CURVE == 0
-        return t;
+    return t;
     #elif FOG_CURVE == 1
-        return 1.0 - pow(1.0 - t, 4.0);
+    return 1.0 - pow(1.0 - t, 4.0);
     #elif FOG_CURVE == 2
-        return t * t;
+    return t * t;
     #elif FOG_CURVE == 3
-        return t * t * (3.0 - 2.0 * t);
+    return t * t * (3.0 - 2.0 * t);
     #elif FOG_CURVE == 4
-        return 1.0 - exp(-4.0 * t);
+    return 1.0 - exp(-4.0 * t);
     #elif FOG_CURVE == 5
-        return (exp(2.0 * t) - 1.0) / (exp(2.0) - 1.0);
+    return (exp(2.0 * t) - 1.0) / (exp(2.0) - 1.0);
     #endif
     return t;
 }
@@ -26,7 +26,7 @@ float getFogStrength(int shape, float fogStart, float fogEnd) {
     fragPos = gbufferProjectionInverse * fragPos;
     fragPos /= fragPos.w;
     float dist;
-    if (shape == 1 /* CYLINDER */) {
+    if (shape == 1 /* CYLINDER */ ) {
         vec4 worldPos = gbufferModelViewInverse * fragPos;
         dist = max(length(worldPos.xz), abs(worldPos.y));
     } else {
@@ -42,7 +42,7 @@ float getFogStrength(int shape, float fogStart, float fogEnd) {
     return clamp(finalFog, 0.0, 1.0);
 }
 
-// New function to get sky-colored fog instead of default fog color
+// get sky-colored fog instead of default fog color
 vec3 getSkyFogColor() {
     return SKY_FOG_COLOR;
 }

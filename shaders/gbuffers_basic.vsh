@@ -3,6 +3,7 @@
 varying vec4 color;
 
 void main() {
-	color = gl_Color;
-	gl_Position = ftransform();
+    color = gl_Color;
+    gl_Position = ftransform();
 }
+

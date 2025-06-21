@@ -18,9 +18,9 @@ varying vec4 color;
 #include "fog.glsl"
 
 void main() {
-	vec4 albedo = texture2D(texture, texcoord) * color * vec4(GLINT_STRENGTH, GLINT_STRENGTH, GLINT_STRENGTH, 1.0f);
-	
-	albedo.rgb = mix(albedo.rgb, gl_Fog.color.rgb, getFogStrength(fogShape, gl_Fog.start, gl_Fog.end));
+    vec4 albedo = texture2D(texture, texcoord) * color * vec4(GLINT_STRENGTH, GLINT_STRENGTH, GLINT_STRENGTH, 1.0f);
 
-	gl_FragData[0] = albedo;
+    albedo.rgb = mix(albedo.rgb, gl_Fog.color.rgb, getFogStrength(fogShape, gl_Fog.start, gl_Fog.end));
+
+    gl_FragData[0] = albedo;
 }
