@@ -1,7 +1,7 @@
-#define FOG_START 0.6 // [0.05 0.1 0.2 0.3 0.4 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1.0 1.2 1.5 2.0]
-#define FOG_END 0.7 // [0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1.0 1.2 1.5 2.0 3.0 5.0]
-#define FOG_DENSITY 0.5 // [0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.25 1.5 1.75 2.0 2.5 3.0 4.0 5.0 8.0 10.0]
-#define FOG_CURVE 0 // [0 1 2 3 4 5 6] Linear, Fast Start, Slow Start, S-Curve, Exponential, Inverse, Plateau
+#define FOG_START 0.2 // [0.05 0.1 0.2 0.3 0.4 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1.0 1.2 1.5 2.0]
+#define FOG_END 0.8 // [0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 1.0 1.2 1.5 2.0 3.0 5.0]
+#define FOG_DENSITY 1 // [0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0 1.25 1.5 1.75 2.0 2.5 3.0 4.0 5.0 8.0 10.0]
+#define FOG_CURVE 1 // [0 1 2 3 4 5 6] Linear, Fast Start, Slow Start, S-Curve, Exponential, Inverse, Plateau
 
 // compute fog curve
 float applyFogCurve(float t) {
