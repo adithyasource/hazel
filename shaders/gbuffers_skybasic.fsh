@@ -28,6 +28,12 @@ void main() {
     vec3 fogColor = gl_Fog.color.rgb;
     vec3 skyColor = color.rgb;
 
+    // where gl_Fog.color is black/unset
+    bool fogMissing = dot(fogColor, fogColor) < 0.001;
+    if (fogMissing) {
+        fogColor = skyColor;
+    }
+
     vec3 finalColor = mix(fogColor, skyColor, t);
 
     gl_FragData[0] = vec4(finalColor, 1.0);
