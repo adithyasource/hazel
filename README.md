@@ -2,6 +2,14 @@
 <table>
     <tbody>
         <tr>
+            <td>⚠️</td>
+            <td>i've stopped working on this and transitioned it to a resource pack instead, find it here <a href="https://github.com/adithyasource/fm">fm (fog resource pack for minecraft)</a>. <br /> hazel still works for 1.21.6</td>
+        </tr>
+    </tbody>
+</table>
+<table>
+    <tbody>
+        <tr>
             <td><a href="https://github.com/adithyasource/hazel/releases"> download for iris</a></td>
             <td>fog control shader for minecraft</td>
         </tr>
